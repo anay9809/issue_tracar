@@ -1,36 +1,25 @@
-# Issue Tracker
+# Issue_Tracker
+This is My repo for coding ninjas backend skill-test assignment
 
-## Images
+i have created folder structure bassed on MVC architecture 
+  1. first i have created schemas for issues and project
+  2. after that create views part by using EJS
+  3. create express server
+  4. established connection with mongoDB
+  5. devides the veiws file into multiples sub files
+  6. create controllers
+  7. setup path in routers
+  8. make buttons clickable by giving aprropriate path
 
-![screen](img/img1.png)
-![screen](img/img2.png)
-![screen](img/img3.png)
-![screen](img/img4.png)
+Issue
+    1. I have stucked at a point while setup my routes for redirecting in different page for showing form for create peoject
+    
 
-This is an issue tracker application built using Node.js and EJS. It allows users to track issues/bugs for different projects. The application provides a user interface to create projects, view project details, filter issues, and create new issues.
 
-## Features
 
-- Neat UI with a home page showing a list of projects.
-- Ability to create a new project with name, description, and author.
-- Project detail page to view bugs related to a specific project.
-- Filter issues by multiple labels, author, and search by title and description.
-- Create new issues for a project with a title, description, labels, and author.
+You should be  first run the command
+-npm install
+-npm start
 
-## Prerequisites
-
-- Node.js (version X.X.X)
-- npm (version X.X.X)
-
-## Installation
-# Clone the repository
-git clone https://github.com/r-Abhay-FSDe/issue-tracker.git
-
-# Navigate to the project directory
-cd issue-tracker
-
-# Install the dependencies
-npm install
-
-# Start the application
-nodemon index.js
+HOSTED URL-----
+               https://vaidyahimanshuissue-tracker.onrender.com/
