@@ -1,6 +1,6 @@
 Issue Tracker
 
-###Deployment Link:  [issue tracker](https://issue-tracker-68gp.onrender.com/)
+###Deployment Link:  [issue tracker]https://issue-tracer.onrender.com
 
 
 Problem statement
