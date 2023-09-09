@@ -1,25 +1,42 @@
-# Issue_Tracker
-This is My repo for coding ninjas backend skill-test assignment
+Issue Tracker
 
-i have created folder structure bassed on MVC architecture 
-  1. first i have created schemas for issues and project
-  2. after that create views part by using EJS
-  3. create express server
-  4. established connection with mongoDB
-  5. devides the veiws file into multiples sub files
-  6. create controllers
-  7. setup path in routers
-  8. make buttons clickable by giving aprropriate path
-
-Issue
-    1. I have stucked at a point while setup my routes for redirecting in different page for showing form for create peoject
-    
+###Deployment Link:  [issue tracker](https://issue-tracker-68gp.onrender.com/)
 
 
+Problem statement
+Create a nodejs + ejs  application to track issues/bugs for a project. Read the Features below on what to implement. You can take inspiration from Github issue tracker or some other application.
 
-You should be  first run the command
--npm install
--npm start
+Instructions
+You are ALLOWED to style the app any way you like.
+Once you have finished with the test, make a video recording of your computer screen (via phone or a software like OBS/screencastify etc) and give a walkthrough of your product (showcase project functionalities). The video can be UPTO 5 mins long.
+Upload frontend and backend code on github, and share the URLs.
 
-HOSTED URL-----
-               https://vaidyahimanshuissue-tracker.onrender.com/
+Features
+Build a neat UI
+Home Page
+Show a list of projects.
+Give a button to create a new Project (On creating a new project it should appear in the list)
+Create Project Page
+Accept the following fields to create a project
+Name
+Description
+Author
+Project Detail Page
+When the user clicks on a project (in home page) redirect the user to this page which will show bugs related to this project
+User should be able to perform following actions on this page
+Filter by multiple labels i.e. I should be able to filter by 2 or more labels at the same time
+Filter by author
+Search by title and description
+A button to create an issue
+Create issue page
+User should be able to create an issue for a project
+Accept the following fields
+Title
+Description
+Labels (multiple labels can be added to a project, IF a project has a label already show it (in dropdown) as the user types the label in)
+Author
+
+
+FREE TIPS:
+For good UI, search for similar apps online or search Dribble, Behance websites for UI mockups.
+

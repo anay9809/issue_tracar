@@ -1,33 +1,29 @@
-// accessing form and divs from issue_form
+// get the form
 let filterIssueForm = document.getElementById('filter-issue-form');
+// get the details of the issues of the project in json
 let issuesJson = document.getElementById('issue-data').getAttribute('data');
-
-//parssing issue data from div
+// parse the data
 let issues = JSON.parse(issuesJson);
-
-//accessing issue lists from issues 
+// get element where filtered issues will be shown
 let issueList = document.getElementById('issues-list');
-
 
 filterIssueForm.addEventListener('submit', function (e) {
   e.preventDefault();
 
+  //create empty array where result will be stored
   let filteredIssues = [];
 
-//   accessing labels by querySelector
+  //get all the form data
   let labelsList = filterIssueForm.querySelectorAll('input[type=checkbox]');
-  
-  //adding multiple arrays of labels by '...' method
   let labelsElements = [...labelsList].filter((Element) => Element.checked);
 
-//   accessing authors
   let authorVal = filterIssueForm.querySelector(
     'input[type=radio][name=author]:checked'
   ).value;
 
-//   mapping and adding labels array
   let [...labelsArr] = labelsElements.map((Element) => Element.value);
 
+  //add issue to filtered issues array
   issues.map((el) => {
     if (el.author == authorVal) {
       if (!filteredIssues.includes(el)) {
@@ -42,18 +38,21 @@ filterIssueForm.addEventListener('submit', function (e) {
       }
     });
   });
-  
-  //sending data from DOM to backend
+  //create a div and add details of the filtered issues
   issueList.innerHTML = '';
   for (let issue of filteredIssues) {
     let Div = document.createElement('div');
     Div.style = 'none';
     Div.innerHTML = `
-      <h1>Title : ${issue.title} </h1>
-      <h3>Author : ${issue.author}</h3>
-      <h4>
+      <div class="card w-100" >
+    <div class="card-body" >
+      <h4 class="card-title">Title : ${issue.title} </h4>
+      <h5 class="card-title">Author : ${issue.author}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">
         Description : ${issue.description}
-      </h4>
+      </h6>
+    </div>
+  </div>
   `;
     issueList.appendChild(Div);
   }

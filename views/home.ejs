@@ -1,17 +1,35 @@
+<head>
+  <style>
+    .card {
+      background-color: lightblue;
+    }
+  </style>
+</head>
 
-<% for( let project of projects ) { %>
-    <div id="project-info-container">
-        <h1 id="project-heading">             
-            <strong> Name of the project : </strong><%= project.name %>
-        </h1>
-        <h3 id="project-author">
-            <strong> Author : </strong> <%= project.author %>
-        </h3> 
-        <p id="project-description">
-            <strong> Description : </strong><%= project.description %>
-        </p>               
-            <a href="/project/project-data/<%=project._id%>"> Open-project </a>  
-        </div>           
-<% } %>
+<body>
+  <!-- Your HTML code here -->
+  <div class="mb-5 p-5">
+    <% for( let project of projects ) { %>
+      <div class="card mb-2 w-50 m-auto">
+        <div class="card-header">
+          <strong> Name of the project : </strong>
+          <%= project.name %>
+        </div>
+        <div class="card-body">
+          <h6 class="card-subtitle mb-2 text-muted">
+            <strong> Author : </strong>
+            <%= project.author %>
+          </h6>
+          <p class="card-text">
+            <strong> Description : </strong>
+            <%= project.description %>
+          </p>
 
- 
+          <div class="m-auto text-end">
+            <a href="/project/<%=project._id%>" class="btn btn-primary m-auto">Open project</a>
+          </div>
+        </div>
+      </div>
+      <% } %>
+  </div>
+</body>

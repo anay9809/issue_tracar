@@ -1,21 +1,24 @@
 {
-  "name": "issue_tracker",
+  "name": "Issue_tracker",
   "version": "1.0.0",
-  "description": "This is an app used to just track the isssue of projectss",
+  "description": "Nodejs + ejs Application to track issues/bugs for a project",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js"
   },
-  "author": "Himanshu Vaidya",
+  "engines": {
+"node": "14.20.1"
+},
+  "author": "shivam",
   "license": "ISC",
   "dependencies": {
-    "config": "^3.3.9",
-    "cors": "^2.8.5",
-    "dotenv": "^16.0.3",
-    "ejs": "^3.1.9",
-    "express": "^4.18.2",
+    "config": "^3.3.7",
+    "dotenv": "^16.0.1",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
     "express-ejs-layouts": "^2.5.1",
-    "mongoose": "^7.0.4"
+    "mongoose": "^6.4.1",
+    "nodemon": "^2.0.21"
   }
 }
